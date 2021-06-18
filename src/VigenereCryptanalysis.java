@@ -31,16 +31,12 @@ public class VigenereCryptanalysis {
             q[i] /= B.length();
     }
 
-    /**
-     * Creates a block of characters, splitting the ciphertext into batches of
+    /* Creates a block of characters, splitting the ciphertext into batches of
      * size `period` and taking the character at position `column`.
      *
      * The block looks like this: `C{0+c}C{p+c}C{2p+c}...`
-     * @param period Batch sizes.
-     * @param column The position of the character inside each batch.
-     * @return The block.
      */
-    public String block(int period, int column) {
+    private String block(int period, int column) {
         int l = ciphertext.length();
 
         // The size of the block
